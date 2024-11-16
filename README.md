@@ -76,10 +76,3 @@ Contributions are welcome! If you'd like to improve Nexoria:
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ---
-
-### How to Customize:
-1. Replace `<your-username>` with your GitHub username.
-2. Replace `nexoria@example.com` with your contact email.
-3. Add any extra features or credits if needed.
-
-Let me know if you’d like further edits! 🚀
