@@ -1,0 +1,107 @@
+/* Global font and color settings */
+:root {
+  --primary-color: #ffffff; /* Example primary color */
+  --secondary-color: #060b27;
+  --gradient-text-color: linear-gradient(to top, #ffffff, #bbbbbb); /* Gradient for text */
+  --background-gradient:
+          radial-gradient(circle at 10% 30%, rgba(114, 20, 255, 0.21), transparent 15%),
+          radial-gradient(circle at 90% 70%, rgba(50, 202, 253, 0.11), transparent 15%),
+          #060b27;
+  --text-color: #ffffff;
+  --subtext-color: #bbbbbb;
+  --hover-color: #4b00b6; /* Example hover color */
+  --font-family: 'Montserrat', sans-serif;
+  --border-color: rgba(255, 255, 255, 0.24);
+}
+
+/* Apply global gradient background, font, and text color */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  font-family: var(--font-family), serif;
+  font-weight: 600;
+  background: var(--background-gradient);
+  background-repeat: no-repeat; /* Prevent gradient tiling */
+  background-size: cover;       /* Scale gradient to fit viewport */
+  background-attachment: fixed; /* Fix background for better UX */
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Heading Styling */
+h1, h2, h3, h4, h5, h6 {
+  color: transparent;
+  background: var(--gradient-text-color);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari */
+}
+
+/* Global link styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* List styling reset */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Image responsive defaults */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Button styling reset */
+button {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Utility classes for spacing */
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.pt-20 { padding-top: 20px; }
+.pb-20 { padding-bottom: 20px; }
+
+/* Prevent extra bottom spacing */
+body > *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll on medium screens */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem;
+  }
+
+  .mt-20 { margin-top: 10px; }
+  .mb-20 { margin-bottom: 10px; }
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.2rem;
+  }
+
+  .mt-20 { margin-top: 8px; }
+  .mb-20 { margin-bottom: 8px; }
+}

@@ -1,0 +1,104 @@
+/* Navbar container */
+.navbar {
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures navbar stays on top of other elements */
+}
+
+/* Navbar inner container for logo and links */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* Navbar logo */
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Navbar links list */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* Individual link styling */
+.navbar-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: var(--hover-color); /* Uses hover color from global variables */
+}
+
+/* Hamburger icon (hidden on desktop) */
+.hamburger-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    /* Show the hamburger icon and hide links on mobile */
+    .hamburger-icon {
+        display: block; /* Show hamburger icon */
+    }
+
+    .navbar-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        background-color: var(--secondary-color);
+        padding: 20px;
+        border-bottom-right-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        text-align: left;
+    }
+
+    /* Show links when active (when hamburger is clicked) */
+    .navbar-links.active {
+        display: flex;
+    }
+
+    /* Adjustments for logo size and container padding on mobile */
+    .navbar .container {
+        padding: 0 15px;
+    }
+
+    .navbar-logo {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .navbar .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-logo {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,109 @@
+/* Features section main styling */
+.features {
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Centered container within the features section */
+.features .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Flexbox container for title and description */
+.features-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: left; /* Align text to the left within the flex container */
+}
+
+/* Features section title */
+.features-title {
+    font-size: 2rem;
+    font-weight: bold;
+    background: var(--gradient-text-color);
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+/* Features section description */
+.features-description {
+    font-size: 1.1rem;
+    color: var(--subtext-color);
+    margin-bottom: 40px;
+}
+
+/* Grid layout for feature items */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px;
+}
+
+/* Individual feature item styling */
+.feature-item {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.feature-icon {
+    font-size: 2rem; /* Adjust size as needed */
+    color: var(--primary-color); /* Set color to match theme */
+    margin-bottom: 10px;
+}
+
+
+/* Feature item title */
+.feature-item-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Feature item description */
+.feature-item-description {
+    font-size: 1rem;
+    color: var(--subtext-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+
+    .features-title {
+        font-size: 1.8rem;
+    }
+
+    .features-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-title {
+        font-size: 1.6rem;
+    }
+
+    .feature-item {
+        padding: 15px;
+    }
+
+    .features-description {
+        font-size: 0.9rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}

@@ -1,0 +1,215 @@
+/* Main styling for AppsSection */
+.apps {
+    background-color: #0a0a23;
+    padding: 60px 0;
+    color: var(--text-color);
+}
+
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Apps section title */
+.apps-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    background: var(--gradient-text-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Large card styling */
+.large-card {
+    background: var(--background-gradient);
+    padding: 30px;
+    border-radius: 12px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px;
+    align-items: center;
+    border: 1px solid var(--border-color);
+}
+
+/* Content within large card */
+.card-content {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.card-content p {
+    width: 80%;
+    text-align: left;
+}
+
+/* Title and description */
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #b8b8d4;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.learn-more-button {
+    padding: 10px 20px;
+    background-color: #6a11cb;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.learn-more-button:hover {
+    background-color: #4c0eb0;
+}
+
+/* Message list inside the large card */
+.message-list {
+    padding: 15px;
+    border: 1px solid rgba(108, 108, 108, 0.36);
+    border-radius: 8px;
+    width: 40%;
+}
+
+/* Message item styling */
+.messages {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.message-item {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #b8b8d4;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Grid container for smaller cards */
+.small-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Styling for mobile applications and file preview cards */
+.mobile-card, .file-card {
+    background: var(--background-gradient);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-color);
+}
+
+.app-image {
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* File table styling */
+.file-table {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.file-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.file-table th, .file-table td {
+    padding: 20px;
+    text-align: left;
+    color: #d0d3e6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.file-table th {
+    font-weight: bold;
+}
+
+.file-table tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 768px) {
+    .large-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .card-content {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .card-title {
+        font-size: 1.6rem;
+    }
+
+    .card-description {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .small-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .message-list {
+        width: 100%;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .apps-title {
+        font-size: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-description {
+        font-size: 0.9rem;
+    }
+
+    .app-image {
+        width: 80%;
+    }
+
+    .learn-more-button {
+        width: 100%;
+        padding: 12px;
+    }
+}
